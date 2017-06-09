@@ -9,11 +9,17 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AnimatesDirective } from 'css-animator';
+import { AnimationService } from 'css-animator';
+import { HeaderComponent } from '../components/header/header';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    AnimatesDirective,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    AnimationService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
